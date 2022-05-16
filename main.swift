@@ -86,3 +86,8 @@ welcome.remove(at: welcome.index(before: welcome.endIndex))
 
 let range = welcome.index(welcome.endIndex, offsetBy: -7)..<welcome.endIndex
 welcome.removeSubrange(range)
+
+let index = greeting.firstIndex(of: ",") ?? greeting.endIndex
+let firstPart = greeting[..<index]
+
+let newString = String(firstPart)
